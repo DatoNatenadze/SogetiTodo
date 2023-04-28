@@ -10,9 +10,9 @@ public class DataSeeder : IDataSeeder
         new Todo
         {
             Id = Guid.NewGuid(),
-            Title = "Create a ToDo API",
+            Title = "Create a Todo app",
             Description =
-                "Develop an API for a product owner with a 'groundbreaking', 'revolutionary', and 'never-seen-before' idea",
+                "Develop an application for a product owner with a 'groundbreaking', 'revolutionary', and 'never-seen-before' idea",
             FinishUntil = DateTime.Now.AddHours(3)
         },
         new Todo
@@ -25,15 +25,15 @@ public class DataSeeder : IDataSeeder
         new Todo
         {
             Id = Guid.NewGuid(),
-            Title = "Go for a run",
-            Description = "3 kilometers around the park, this time really",
+            Title = "Debug the unexplainable",
+            Description = "Find and fix a bug so elusive that it makes the Loch Ness Monster seem like a regular visitor",
             FinishUntil = DateTime.Now.AddDays(2)
         },
         new Todo
         {
             Id = Guid.NewGuid(),
             Title = "Buy groceries",
-            Description = "Milk, eggs, bread, and a few other things (no chocolates this time)",
+            Description = "Milk, eggs, bread, and a few other things (casual and banal)",
             FinishUntil = DateTime.Now.AddDays(1)
         }
     };
