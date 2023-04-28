@@ -49,7 +49,7 @@
       const deleteUrl = '@Url.Action("Delete", "Todo")';
       flatpickr('#create-todo-finish-until', {
           enableTime: true,
-          minDate: new Date(),
+          minDate: new Date().setMinutes(new Date().getMinutes() + 5),
           maxDate: new Date().fp_incr(2 * 365),
           time_24hr: true,
           dateFormat: "Y-m-d H:i",
