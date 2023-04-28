@@ -1,0 +1,32 @@
+# Rider files
+.idea/
+*.iml
+
+# .NET build files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.vs/
+obj/
+bin/
+
+# NuGet packages
+packages/
+*.nupkg
+*.pck
+
+# Other build artifacts
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+
+# Others
+*.bak
+*.orig
+*.csproj.user
+*.dbmdl
+*.jfm
+*.pfx
+*.publishsettings
+node_modules/

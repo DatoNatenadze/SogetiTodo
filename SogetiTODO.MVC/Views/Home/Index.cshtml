@@ -1,0 +1,66 @@
+﻿@model IEnumerable<TodoViewModel>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="css/home.css" rel="stylesheet"/>
+    <script src="js/home.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="left-column">
+        <h2>Add a thing to do</h2>
+        <form id="create-todo-form">
+            <label for="create-todo-title">Todo Title:</label>
+            <input type="text" id="create-todo-title" placeholder="Todo Title" autocomplete="off" required>
+            <label for="create-todo-description">Todo Description:</label>
+            <textarea id="create-todo-description" placeholder="You can leave this empty" autocomplete="off" ></textarea>
+            <label for="create-todo-finish-until">Finish Until:</label>
+            <input type="text" id="create-todo-finish-until" data-input="create-todo-finish-until-flatpickr" autocomplete="off" min="1" required>
+            <span id="create-todo-finish-until-error" style="color: red;"></span>
+            <button type="submit" class="submit-button">Add Todo</button>
+        </form>
+    </div>
+    <div class="right-column">
+        <div class="scrollable-content">
+            <ul class="list">
+                @foreach (var todo in Model.OrderBy(t => t.IsCompleted))
+                {
+                    @await Html.PartialAsync("_TodoItem", todo)
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+      const createUrl = '@Url.Action("Create", "Todo")';
+      const updateUrl = '@Url.Action("Update", "Todo")';
+      const deleteUrl = '@Url.Action("Delete", "Todo")';
+      flatpickr('#create-todo-finish-until', {
+          enableTime: true,
+          minDate: new Date(),
+          maxDate: new Date().fp_incr(2 * 365),
+          time_24hr: true,
+          dateFormat: "Y-m-d H:i",
+          allowInput: true,
+          onOpen: function(selectedDates, dateStr, instance) {
+              $(instance.altInput).prop('readonly', true);
+          },
+          onClose: function(selectedDates, dateStr, instance) {
+              $(instance.altInput).prop('readonly', false);
+              $(instance.altInput).blur();
+          }
+      });
+  </script>
+</html>

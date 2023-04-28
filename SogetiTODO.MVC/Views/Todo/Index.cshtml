@@ -1,0 +1,22 @@
+﻿@model TodoViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Details</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="~/css/details.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="todo-details">
+    <h1>@Model.Title</h1>
+    <p>@Model.Description</p>
+    <p>Finish Until: <span id="finish-until">@Model.FinishUntil.ToString("yyyy-MM-dd HH:mm")</span></p>
+    <p>Status: @(Model.IsCompleted ? "Completed" : "Not Completed")</p>
+    <p id="countdown"></p>
+</div>
+<script src="~/js/details.js" defer></script>
+</body>
+</html>

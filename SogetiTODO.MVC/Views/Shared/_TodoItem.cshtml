@@ -1,0 +1,24 @@
+﻿@model TodoViewModel
+
+<li class="list__item @(Model.IsCompleted ? "list__item--completed" : "")" data-id="@Model.Id">
+    <div style="display: flex; justify-content: space-between;">
+        <div>
+            <h1 class="list__item__title">@Model.Title</h1>
+            <input type="checkbox" class="list__item__checkbox" @(Model.IsCompleted ? "checked" : "")>
+            <div class="loading" style="display:none">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <p class="list__item__completed @(Model.IsCompleted ? "completed" : "not-completed")">
+                @(Model.IsCompleted ? "Completed" : "Not Completed")
+            </p>
+            <p class="list__item__datetime">@Model.FinishUntil.ToString("yyyy-MM-dd HH:mm")</p>
+        </div>
+        <div class="list__item__details">
+            <button class="list__item__delete" onclick="handleDeleteButtonClick(event)">
+                <i class="fas fa-trash"></i>
+                Delete
+            </button>
+            <a href="@Url.Action("Index", "Todo", new { todoItemId = Model.Id })">View Details</a>
+        </div>
+    </div>
+</li>

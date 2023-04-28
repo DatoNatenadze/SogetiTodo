@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SogetiTODO.MVC", "SogetiTODO.MVC\SogetiTODO.MVC.csproj", "{09B70CED-FCA2-4896-9CC9-43F7535D492E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SogetiTODO.Domain", "SogetiTODO.Domain\SogetiTODO.Domain.csproj", "{E95CF29E-2C09-45C8-98BA-14F7249D13C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SogetiTODO.Repositories", "SogetiTODO.Repositories\SogetiTODO.Repositories.csproj", "{66A112E2-FF97-4893-AE95-612D65BF1770}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SogetiTODO.Services", "SogetiTODO.Services\SogetiTODO.Services.csproj", "{883CAE07-9495-4377-92A2-6AF62E4D36DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SogetiTODO.Tests", "SogetiTODO.Tests", "{646DC2D7-9B05-49EC-9F7C-21BDDDA6CF2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SogetiTODO.Tests.Unit", "SogetiTODO.Tests.Unit\SogetiTODO.Tests.Unit.csproj", "{5615F003-D84C-4C65-8C63-140279734A24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09B70CED-FCA2-4896-9CC9-43F7535D492E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B70CED-FCA2-4896-9CC9-43F7535D492E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B70CED-FCA2-4896-9CC9-43F7535D492E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B70CED-FCA2-4896-9CC9-43F7535D492E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E95CF29E-2C09-45C8-98BA-14F7249D13C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E95CF29E-2C09-45C8-98BA-14F7249D13C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E95CF29E-2C09-45C8-98BA-14F7249D13C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E95CF29E-2C09-45C8-98BA-14F7249D13C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A112E2-FF97-4893-AE95-612D65BF1770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A112E2-FF97-4893-AE95-612D65BF1770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A112E2-FF97-4893-AE95-612D65BF1770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A112E2-FF97-4893-AE95-612D65BF1770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{883CAE07-9495-4377-92A2-6AF62E4D36DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{883CAE07-9495-4377-92A2-6AF62E4D36DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{883CAE07-9495-4377-92A2-6AF62E4D36DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{883CAE07-9495-4377-92A2-6AF62E4D36DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5615F003-D84C-4C65-8C63-140279734A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5615F003-D84C-4C65-8C63-140279734A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5615F003-D84C-4C65-8C63-140279734A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5615F003-D84C-4C65-8C63-140279734A24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5615F003-D84C-4C65-8C63-140279734A24} = {646DC2D7-9B05-49EC-9F7C-21BDDDA6CF2F}
+	EndGlobalSection
+EndGlobal
